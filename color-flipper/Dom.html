@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding getElementById</title>
+</head>
+<body>
+  <h1 id="main-heading">This is the main heading</h1>
+  <p id="paragraph-text">This is a paragraph with some text.</p>
+  <button id="change-button">Change Text</button>
+
+  <script>
+    // Explain and retrieve elements using getElementById
+    console.log("**Explanation:**");
+    console.log("The getElementById() method is used to access specific HTML elements based on their unique IDs.");
+    console.log("It's like having a direct line to a particular element in your document library.");
+
+    // Get references to the elements
+    const heading = document.getElementById("main-heading");
+    const paragraph = document.getElementById("paragraph-text");
+    const button = document.getElementById("change-button");
+
+    console.log("**Retrieved elements:**");
+    console.log("Heading:", heading); // Outputs the heading element object
+    console.log("Paragraph:", paragraph); // Outputs the paragraph element object
+    console.log("Button:", button); // Outputs the button element object
+
+    // Use the retrieved elements to modify the page
+    button.addEventListener("click", function() {
+      console.log("**Button clicked! Changing text...");
+      paragraph.textContent = "The text has been changed!";
+      heading.style.color = "blue";
+    });
+
+    console.log("**Now try clicking the button to see the changes!**");
+  </script>
+</body>
+</html>
